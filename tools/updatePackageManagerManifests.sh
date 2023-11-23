@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# Copyright © 2023 Wanzl GmbH & Co. KGaA. All rights reserved.
+
 # updates Package.swift to contain matching xcframework-download-url and -checksum for given VERSION_NAME
 # preconditions: 
 #   - env var VERSION_NAME must be set to a semantic version string like "1.0.2"
