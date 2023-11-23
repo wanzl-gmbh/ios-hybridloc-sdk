@@ -13,8 +13,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "HybridlocSDK",
-            url: "https://github.com/wanzl-gmbh/ios-hybridloc-sdk/releases/download/0.9.4/HybridlocSDK_v0.9.4.xcframework.zip",
-            checksum: "60934e02becda60fb48b2e9c2c652dfaacfc835613ff81ccc6654b192741881c"
+            url: "https://github.com/wanzl-gmbh/ios-hybridloc-sdk/releases/download/0.9.5/HybridlocSDK_v0.9.5.xcframework.zip",
+            checksum: "434b9d982416d9f9b6d391d589c3d34ed7c8fdbe63dc7cea2fb85d22ce56bb44"
         )
     ]
 )
