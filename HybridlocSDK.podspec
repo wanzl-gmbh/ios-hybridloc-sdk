@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.license                   = { type: 'Proprietary' }
     s.author                    = 'Wanzl'
     s.source                    = { :http => "#{s.homepage}/releases/download/#{s.version}/HybridlocSDK_v#{s.version}.xcframework.zip",
-                                    :sha256 => '31b8fa3b3679b15bf2423de54a8852e9c2f8972422c035673a30b519913a021f' }
+                                    :sha256 => '342eac068fd2b188f7b496bbff7dd99e482f95f5ebdc512f1415a2c89cb7d466' }
     s.vendored_frameworks       = 'HybridlocSDK.xcframework'
     s.preserve_paths            = '*'
   end
