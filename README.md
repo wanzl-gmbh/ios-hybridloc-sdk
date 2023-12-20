@@ -26,14 +26,14 @@ Add the `pod 'HybridlocSDK‘` to your Podfile.
 
 [!IMPORTANT]  
 The SDK requires 
-    - having the 'Near Field Communication Tag Reading' capability enabled in your app and 
-    - the NFCReaderUsageDescription / 'Privacy - NFC Scan Usage Description' entry in the Info.plist or under the Info tap of your target in your project.
+  * having the 'Near Field Communication Tag Reading' capability enabled in your app and 
+  * the NFCReaderUsageDescription / 'Privacy - NFC Scan Usage Description' entry in the Info.plist or under the Info tap of your target in your project.
     
 [!WARNING]  
 The SDK-API is not thread safe. Use it from one (preferably the main) thread. 
 
 [!WARNING]  
-Please be advised that the credentials (clientId and clientSecret) are sensitive data used to authenticate against the backend. We recommend not to statically place them in the app's code as in the code example below, but deploy some hiding/obfuscation method or to dynamically download them after first app start, e.g. via on-demand resources (see [blog post](https://augmentedcode.io/2023/11/27/using-on-demand-resources-for-securely-storing-api-keys-in-ios-apps/)). Please ensure to store them safely to prevent unwanted access. If we detect misuse of these credentials, they will be revoked immediately.
+Please be advised that the credentials (clientId and clientSecret) are sensitive data used to authenticate against the backend. We recommend to not statically store them in the app's code as was done in the code example below, but to deploy some hiding/obfuscation method. The best practice is to dynamically download them after first app start, e.g. via on-demand resources (see [blog post](https://augmentedcode.io/2023/11/27/using-on-demand-resources-for-securely-storing-api-keys-in-ios-apps/)). Please ensure to store them securely to prevent unwanted access. If we detect misuse of these credentials, they will be revoked immediately.
 
 [!IMPORTANT]  
 Only one active instance of HybridlocClient is allowed. Please reuse created instances instead of creating new ones or consider deinitializing a created instance beforehand. Also be sure to not establish retain cycles between your code and instances of this class.
@@ -42,10 +42,10 @@ Before initializing a new instance of this class, please make sure to call cance
 ### Create the HyblidlocClient object:
 
 The SDK can be initialised with a public initialiser. The initialiser requires the following parameters:
- - clientId - your client ID for authentication (String)
- - clientSecret - your client secret for authentication (String)
- - userId - your user ID for analytics (String)
- - nfcAlertMessages - a struct for passing the texts (String) that should be shown in the NFC system alert during and after the unlock process initially, after success for an error case
+  * clientId - your client ID for authentication (String)
+  * clientSecret - your client secret for authentication (String)
+  * userId - your user ID for analytics (String)
+  * nfcAlertMessages - a struct for passing the texts (String) that should be shown in the NFC system alert during and after the unlock process initially, after success for an error case
  
  [!NOTE]  
  The clientId, clientSecret and userId were provided to you by Wanzl. If you do not have any credentials yet, please get in touch with your contact at Wanzl.
@@ -73,7 +73,7 @@ The SDK supports only one call of 'loadDigitalKeys()' or 'openLock()' at a time.
 This function retrieves the digital keys from the backend and stores them locally. Opening a lock depends on having the latest keys in your local storage, otherwise you may not be able to open the locks. 
 
 [!TIP]
-We recommend loading the keys on every app start, to be always up to date with the newest keys but don't trigger too much network traffic.
+We recommend loading the keys on every app start, to be always up to date with the newest keys without creating too much network traffic.
 
 Example:
 
