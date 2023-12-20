@@ -37,7 +37,7 @@ Add the `pod 'HybridlocSDK‘` to your Podfile.
 
 > [!IMPORTANT]
 > Only one active instance of HybridlocClient is allowed. Please reuse created instances instead of creating new ones or consider deinitializing a created instance beforehand. Also be sure to not establish retain cycles between your code and instances of this class.
-Before initializing a new instance of this class, please make sure to call cancelLockOpening() on the old instance. Otherwise the old instance may leak!
+> Before initializing a new instance of this class, please make sure to call cancelLockOpening() on the old instance. Otherwise the old instance may leak!
 
 ### Create the HyblidlocClient object:
 
