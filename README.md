@@ -20,7 +20,7 @@ https://github.com/wanzl-gmbh/ios-hybridloc-sdk
 
 ### Cocoapods
 
-Add the `pod 'HybridlocSDK‘` to your Podfile.
+Add the `pod 'HybridlocSDK'` to your Podfile.
 
 ## Usage
 
