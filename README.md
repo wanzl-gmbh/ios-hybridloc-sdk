@@ -6,7 +6,7 @@ The Hybridloc Software Development Kit (SDK) enables seamless integration of Wan
 
 ## Compatibility
 
-The SDK requires min. iOS 14.
+The SDK requires min. iOS 15.
 
 ## Installation
 
@@ -28,7 +28,7 @@ Add the `pod 'HybridlocSDK'` to your Podfile.
 > The SDK requires 
 >   * having the 'Near Field Communication Tag Reading' capability enabled in your app and 
 >   * the NFCReaderUsageDescription / 'Privacy - NFC Scan Usage Description' entry in the Info.plist or under the Info tap of your target in your project.
-    
+
 > [!WARNING]
 > The SDK-API is not thread safe. Use it from one (preferably the main) thread. 
 
@@ -127,3 +127,4 @@ This software is available under the [MIT]("https://github.com/wanzl-gmbh/ios-hy
 
 ## Feedback
 Please contact info@wanzl.de.
+
